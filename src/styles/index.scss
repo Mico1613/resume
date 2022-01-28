@@ -7,7 +7,7 @@
   );
 }
 * {
-  cursor: url("../img/curs2.png"), default !important;
+  cursor: url("../img/cursor.png"), default !important;
 }
 body {
   @include adaptiveFont(1920, 36, 16);

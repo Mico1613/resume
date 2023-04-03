@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=development&&webpack serve --open --host 0.0.0.0",
+    "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack"
   },
@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.15.8",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.4.0",
-    "favicons": "^6.2.2",
+    "favicons": "^7.1.1",
     "favicons-webpack-plugin": "^5.0.2",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",

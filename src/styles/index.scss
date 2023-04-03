@@ -1,29 +1,36 @@
 @use "global";
+
 @mixin adaptiveFont($maxWidth, $pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - 320;
   font-size: calc(
-    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+          #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
   );
 }
+
 * {
   cursor: url("../img/cursor.png"), default !important;
 }
+
 body {
   @include adaptiveFont(1920, 36, 16);
   text-shadow: 1px 1px 20px rgba(28, 168, 40, 0.774);
   padding: 20px 0;
 }
+
 h1 {
   @include adaptiveFont(1920, 56, 20);
   margin-bottom: 20px;
 }
+
 .swiper {
   width: 100%;
   height: 100%;
+
   &-wrapper {
     align-items: center;
   }
+
   &-slide {
     user-select: none;
     height: 50% !important;
@@ -37,23 +44,27 @@ h1 {
       padding: 0 70px;
     }
   }
+
   &-button-prev,
   &-button-next::after {
     color: #00ff41 !important;
     font-weight: 700;
   }
+
   &-button-prev {
     left: 20px !important;
     @media screen and (max-width: 768px) {
       left: 10px !important;
     }
   }
+
   &-button-next {
     right: 20px !important;
     @media screen and (max-width: 768px) {
       right: 10px !important;
     }
   }
+
   &-button-disabled {
     display: none !important;
   }
@@ -65,12 +76,15 @@ h1 {
     line-height: 1.5;
   }
 }
+
 a {
   color: rgb(30, 210, 223);
   text-shadow: 2px 2px 1px rgb(39, 117, 233);
   text-decoration: underline;
+
   &:hover {
     text-decoration: underline;
     text-shadow: 3px 3px 1px rgb(39, 117, 233);
   }
 }
+
